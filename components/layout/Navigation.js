@@ -58,7 +58,10 @@ const Navigation = () => {
         transition={{ duration: 0.6 }}
         whileHover={{ scale: 1.05 }}
       >
-        Zoya.
+        <div className="font-poppins text-xl ">
+              Zoya
+              <span className="inline-block w-2 h-2 ml-1 bg-white rounded-full" />
+            </div>
       </motion.a>
 
       {/* Navigation Items */}
@@ -70,7 +73,7 @@ const Navigation = () => {
         <motion.div
           className="absolute w-20 h-20 bg-accent/10 rounded-full pointer-events-none"
           style={{
-            left: cursorXSpring,
+            left: cursorXSpring,                                                                                            
             top: cursorYSpring,
             x: '-50%',
             y: '-50%',
