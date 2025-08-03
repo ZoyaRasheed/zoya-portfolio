@@ -1,4 +1,4 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import { siteSettings } from "@/config/settings";
 
@@ -12,6 +12,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
 export const metadata = {
   title: siteSettings.site.title,
   description: siteSettings.site.description,
@@ -23,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased font-sans`}
+        className={`${inter.variable} ${playfair.variable} ${poppins.variable} antialiased font-sans`}
       >
         {children}
       </body>

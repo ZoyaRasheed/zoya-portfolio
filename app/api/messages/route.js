@@ -4,6 +4,13 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json(
+        { error: 'Contact form is not configured. Please set MONGODB_URI environment variable.' },
+        { status: 503 }
+      );
+    }
+
     await connectDB();
     
     const body = await request.json();
@@ -38,6 +45,13 @@ export async function POST(request) {
 
 export async function GET() {
   try {
+    if (!process.env.MONGODB_URI) {
+      return NextResponse.json(
+        { error: 'Database not configured' },
+        { status: 503 }
+      );
+    }
+
     await connectDB();
     
     const messages = await Message.find().sort({ createdAt: -1 });

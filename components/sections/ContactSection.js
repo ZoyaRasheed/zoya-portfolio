@@ -63,9 +63,9 @@ const ContactSection = () => {
             <AnimatedText text="Get In Touch" />
           </h2>
           <div className="w-24 h-px bg-gray-300 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Interested in working together? I'd love to hear from you. 
-            Send me a message and I'll get back to you as soon as possible.
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Interested in working together? I&apos;d love to hear from you. 
+            Send me a message and I&apos;ll get back to you as soon as possible.
           </p>
         </motion.div>
 
@@ -79,9 +79,9 @@ const ContactSection = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-light mb-6">Let's start a conversation</h3>
-              <p className="text-gray-600 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, creative projects, 
+              <h3 className="text-2xl font-light mb-6">Let&apos;s start a conversation</h3>
+              <p className="text-white leading-relaxed mb-8">
+                I&apos;m always open to discussing new opportunities, creative projects, 
                 or just having a chat about technology and design.
               </p>
             </div>
@@ -100,10 +100,10 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Email</p>
+                  <p className="text-sm font-medium text-gray-200">Email</p>
                   <a
                     href={`mailto:${portfolioData.email}`}
-                    className="text-gray-600 hover:text-black transition-colors duration-300"
+                    className="text-gray-400 hover:text-black transition-colors duration-300"
                   >
                     {portfolioData.email}
                   </a>
@@ -124,8 +124,8 @@ const ContactSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900">Location</p>
-                  <p className="text-gray-600">{portfolioData.location}</p>
+                  <p className="text-sm font-medium text-gray-200">Location</p>
+                  <p className="text-gray-400">{portfolioData.location}</p>
                 </div>
               </motion.div>
             </div>

@@ -10,7 +10,7 @@ const ProjectsSection = () => {
   const otherProjects = projectsData.filter(project => !project.featured);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -19,10 +19,10 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-light mb-4">
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-white font-poppins">
             <AnimatedText text="Selected Work" />
           </h2>
-          <div className="w-24 h-px bg-gray-300 mx-auto"></div>
+          <div className="w-24 h-px bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Featured Projects */}
@@ -41,13 +41,13 @@ const ProjectsSection = () => {
               {/* Project Image */}
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <motion.div
-                  className="aspect-[4/3] relative bg-white rounded-lg overflow-hidden shadow-lg"
+                  className="aspect-[4/3] relative bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-blue-400/20"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   {/* Placeholder for project image */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500 text-lg">{project.title} Preview</span>
+                  <div className="w-full h-full bg-gradient-to-br from-blue-600/30 to-pink-600/30 flex items-center justify-center">
+                    <span className="text-blue-200 text-lg font-poppins">{project.title} Preview</span>
                   </div>
                 </motion.div>
               </div>
@@ -60,11 +60,11 @@ const ProjectsSection = () => {
                   transition={{ delay: 0.3, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-sm font-medium text-accent uppercase tracking-wide">
+                  <span className="text-sm font-medium text-blue-300 uppercase tracking-wide font-poppins">
                     {project.category} • {project.year}
                   </span>
-                  <h3 className="text-3xl font-light mt-2 mb-4">{project.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <h3 className="text-3xl font-light mt-2 mb-4 text-white font-poppins">{project.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed font-poppins">
                     {project.longDescription}
                   </p>
                   
@@ -72,7 +72,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-blue-900/30 text-blue-200 rounded-full text-sm font-medium border border-blue-400/20 font-poppins"
                       >
                         {tech}
                       </span>
@@ -85,7 +85,7 @@ const ProjectsSection = () => {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-black transition-colors duration-300"
+                        className="inline-flex items-center text-sm font-medium text-blue-300 hover:text-white transition-colors duration-300 font-poppins"
                       >
                         View Live
                         <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +98,7 @@ const ProjectsSection = () => {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-black transition-colors duration-300"
+                        className="inline-flex items-center text-sm font-medium text-blue-300 hover:text-white transition-colors duration-300 font-poppins"
                       >
                         View Code
                         <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +121,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-2xl font-light text-center mb-12"
+              className="text-2xl font-light text-center mb-12 text-white font-poppins"
             >
               <AnimatedText text="Other Projects" />
             </motion.h3>
@@ -134,24 +134,24 @@ const ProjectsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
-                  className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="bg-gradient-to-br from-blue-900/10 to-purple-900/10 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg border border-blue-400/20 hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="aspect-[4/3] relative bg-gradient-to-br from-gray-200 to-gray-300">
+                  <div className="aspect-[4/3] relative bg-gradient-to-br from-blue-600/30 to-pink-600/30">
                     <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-gray-500">{project.title}</span>
+                      <span className="text-blue-200 font-poppins">{project.title}</span>
                     </div>
                   </div>
                   
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-medium text-accent uppercase tracking-wide">
+                      <span className="text-xs font-medium text-blue-300 uppercase tracking-wide font-poppins">
                         {project.category}
                       </span>
-                      <span className="text-xs text-gray-500">{project.year}</span>
+                      <span className="text-xs text-gray-400 font-poppins">{project.year}</span>
                     </div>
                     
-                    <h4 className="text-lg font-medium mb-2">{project.title}</h4>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    <h4 className="text-lg font-medium mb-2 text-white font-poppins">{project.title}</h4>
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-2 font-poppins">
                       {project.description}
                     </p>
                     
@@ -159,13 +159,13 @@ const ProjectsSection = () => {
                       {project.technologies.slice(0, 3).map((tech, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs"
+                          className="px-2 py-1 bg-blue-900/30 text-blue-200 rounded text-xs border border-blue-400/20 font-poppins"
                         >
                           {tech}
                         </span>
                       ))}
                       {project.technologies.length > 3 && (
-                        <span className="text-xs text-gray-500">
+                        <span className="text-xs text-gray-400 font-poppins">
                           +{project.technologies.length - 3} more
                         </span>
                       )}
@@ -177,7 +177,7 @@ const ProjectsSection = () => {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs font-medium text-gray-600 hover:text-black transition-colors duration-300"
+                          className="text-xs font-medium text-blue-300 hover:text-white transition-colors duration-300 font-poppins"
                         >
                           Live Demo
                         </a>
@@ -187,7 +187,7 @@ const ProjectsSection = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs font-medium text-gray-600 hover:text-black transition-colors duration-300"
+                          className="text-xs font-medium text-blue-300 hover:text-white transition-colors duration-300 font-poppins"
                         >
                           GitHub
                         </a>

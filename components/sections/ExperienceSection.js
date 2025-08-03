@@ -15,17 +15,17 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-light mb-4">
+          <h2 className="text-4xl md:text-5xl font-light mb-4 text-white font-poppins">
             <AnimatedText text="Experience" />
           </h2>
-          <div className="w-24 h-px bg-gray-300 mx-auto"></div>
+          <div className="w-24 h-px bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Experience Timeline */}
         <div className="max-w-4xl mx-auto mb-20">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-200"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-blue-400/30"></div>
             
             {experienceData.map((exp, index) => (
               <motion.div
@@ -37,30 +37,30 @@ const ExperienceSection = () => {
                 className="relative flex items-start mb-12 last:mb-0"
               >
                 {/* Timeline dot */}
-                <div className={`absolute left-6 w-4 h-4 rounded-full ${exp.current ? 'bg-accent' : 'bg-gray-400'} z-10`}></div>
+                <div className={`absolute left-6 w-4 h-4 rounded-full ${exp.current ? 'bg-blue-400' : 'bg-gray-500'} z-10`}></div>
                 
                 {/* Content */}
-                <div className="ml-20 bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-300">
+                <div className="ml-20 bg-gradient-to-br from-blue-900/10 to-purple-900/10 backdrop-blur-sm rounded-lg shadow-lg border border-blue-400/20 p-6 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-medium text-gray-900">{exp.position}</h3>
-                      <p className="text-lg text-accent font-medium">{exp.company}</p>
+                      <h3 className="text-xl font-medium text-white font-poppins">{exp.position}</h3>
+                      <p className="text-lg text-blue-300 font-medium font-poppins">{exp.company}</p>
                     </div>
-                    <div className="text-sm text-gray-500 mt-2 md:mt-0">
+                    <div className="text-sm text-gray-400 mt-2 md:mt-0 font-poppins">
                       <p>{exp.duration}</p>
                       <p>{exp.location}</p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4">{exp.description}</p>
+                  <p className="text-gray-300 mb-4 font-poppins">{exp.description}</p>
                   
                   {exp.achievements && exp.achievements.length > 0 && (
                     <div className="mb-4">
-                      <h4 className="text-sm font-medium text-gray-900 mb-2">Key Achievements:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <h4 className="text-sm font-medium text-white mb-2 font-poppins">Key Achievements:</h4>
+                      <ul className="text-sm text-gray-300 space-y-1 font-poppins">
                         {exp.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start">
-                            <span className="inline-block w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span className="inline-block w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                             {achievement}
                           </li>
                         ))}
@@ -72,7 +72,7 @@ const ExperienceSection = () => {
                     {exp.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium"
+                        className="px-3 py-1 bg-blue-900/30 text-blue-200 rounded-full text-xs font-medium border border-blue-400/20 font-poppins"
                       >
                         {tech}
                       </span>
@@ -92,7 +92,7 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h3 className="text-2xl font-light text-center mb-12">
+          <h3 className="text-2xl font-light text-center mb-12 text-white font-poppins">
             <AnimatedText text="Technical Skills" />
           </h3>
           
@@ -106,12 +106,12 @@ const ExperienceSection = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <h4 className="text-lg font-medium text-gray-900 mb-4">{skillGroup.category}</h4>
+                <h4 className="text-lg font-medium text-white mb-4 font-poppins">{skillGroup.category}</h4>
                 <div className="flex flex-wrap justify-center gap-2">
                   {skillGroup.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm hover:bg-gray-100 transition-colors duration-200"
+                      className="px-3 py-1 bg-blue-900/20 text-blue-200 rounded-full text-sm hover:bg-blue-800/30 transition-colors duration-200 border border-blue-400/20 font-poppins"
                     >
                       {skill}
                     </span>
