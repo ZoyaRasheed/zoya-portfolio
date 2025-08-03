@@ -106,3 +106,80 @@ Build modular, reusable components:
 7. README with setup instructions
 
 Create a portfolio that feels more like an art piece than a typical developer website. Focus on typography, whitespace, and subtle interactions that surprise and delight without overwhelming the content.
+
+
+Update : 🌟 Hero Section / Landing Page
+
+    When someone opens the site, it should display a typing animation that says:
+    "Hello, I am Zoya Rasheed"
+    It should appear as if someone is typing the text — not too fast, with smooth typing animation.
+
+    Use a stylish and slightly bold font (not a generic one like Arial or Times). Consider something like "Poppins", "Fira Code", or "Satisfy".
+
+    The background should be a black base with a blue-to-pink gradient overlay or blend. Not solid colors — use modern gradient or glassmorphism styles to make it visually attractive.
+
+    Add some animated visual elements in the hero section, like an animated laptop, floating code snippets, or abstract shapes — something related to web development. These elements should move subtly (like floating or fading).
+
+✨ Navigation and Sections
+
+    The site should be single-page, but when someone clicks on:
+
+        About
+
+        Projects
+
+        Experience
+
+        Contact
+
+    It should not scroll down, but instead flip or transition smoothly to that section — like a card flip animation or a page turning effect. Transitions should be fancy but not heavy.
+
+💻 Projects Section
+
+    Projects should appear with flip cards or sliding animations. When hovering or clicking, the project details can show up in an interactive way.
+
+    Keep it lively and include some animation or hover effects.
+
+👩🏽‍💻 About Section
+
+    Include a short animated intro about me as a frontend developer.
+
+    I don’t want my picture added, but you can use animated icons or illustrations (like a coding girl, or laptop with sparkles).
+
+    Add some floating elements or gradient dividers.
+
+📞 Contact Section
+
+    A clean but stylish contact form with floating labels or animated placeholders.
+
+    Include icons and some playful motion (like send button animation).
+
+    Add my email, LinkedIn, and GitHub links.
+
+📌 Footer
+
+    A proper footer with:
+
+        My name
+
+        Current year
+
+        Social links (icons)
+
+        A cute touch — like a sparkle animation or soft pastel wave
+
+        Keep colors in theme (black + pink/blue gradient)
+
+💡 General Aesthetic and Suggestions
+
+    The overall design should look fancy, modern, slightly girly, and creative — not corporate or boring.
+
+    Use a consistent color theme: black + blue-pink gradients.
+
+    Use animated objects or Lottie animations where possible.
+
+    Fonts and transitions should feel soft and fluid, not rigid.
+
+    I am a frontend developer mainly using JavaScript and React, with a bit of Node.js. Please reflect that visually or in icons/animations.
+
+Do not include my picture anywhere. Keep the whole theme developer-focused, slightly feminine, and creative.
